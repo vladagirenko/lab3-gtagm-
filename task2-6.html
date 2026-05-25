@@ -1,1 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Завдання 2-6</title>
+</head>
+<body>
 
+    <p><a href="index.html">← Назад</a></p>
+    <h1>Завдання 2-6</h1>
+    <hr>
+
+    <div id="output" style="font-size: 32px; font-weight: bold; margin-top: 20px;"></div>
+
+    <script>
+        var phrase = "Тестова фраза.";
+        var colors = ["red", "orange", "green", "blue", "purple"];
+        var resultHTML = "";
+
+        for (var i = 0; i < phrase.length; i++) {
+            var colorIndex = i % colors.length;
+            resultHTML += '<span style="color:' + colors[colorIndex] + '">' + phrase[i] + '</span>';
+        }
+
+        document.getElementById('output').innerHTML = resultHTML;
+    </script>
+
+</body>
+</html>
