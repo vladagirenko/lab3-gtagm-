@@ -1,1 +1,36 @@
-<h1>Завдання 5-1</h1>
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Завдання 5-1</title>
+</head>
+<body>
+
+    <p><a href="index.html">← Назад</a></p>
+    <h1>Завдання 5-1: Поступове витирання тексту</h1>
+    <hr>
+
+    <button onclick="fadeOut()">Стерти текст</button>
+
+    <div id="textBlock" style="font-size: 20px; margin-top: 20px; color: red;">
+        Цей текст буде поступово зникати (витиратися) після натискання на кнопку за допомогою таймера.
+    </div>
+
+    <script>
+        var opacity = 1;
+        var timer;
+
+        function fadeOut() {
+            timer = setInterval(function() {
+                opacity -= 0.05;
+                document.getElementById('textBlock').style.opacity = opacity;
+
+                if (opacity <= 0) {
+                    clearInterval(timer);
+                }
+            }, 50);
+        }
+    </script>
+
+</body>
+</html>
