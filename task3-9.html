@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Завдання 3-9</title>
+</head>
+<body>
+
+    <p><a href="index.html">← Назад</a></p>
+    <h1>Завдання 3-9: Зворотний відлік часу</h1>
+    <hr>
+
+    <div style="margin-top: 20px; font-family: sans-serif;">
+        <h3>До закриття сторінки залишилось:</h3>
+        <div id="countdown" style="font-size: 48px; font-weight: bold; color: red; font-family: monospace;">01:00</div>
+    </div>
+
+    <script>
+        var totalSeconds = 60; 
+
+        function startTimer() {
+            var timer = setInterval(function() {
+                totalSeconds--;
+
+                var minutes = Math.floor(totalSeconds / 60);
+                var seconds = totalSeconds % 60;
+
+                if (minutes < 10) minutes = "0" + minutes;
+                if (seconds < 10) seconds = "0" + seconds;
+
+                document.getElementById('countdown').textContent = minutes + ":" + seconds;
+
+                if (totalSeconds <= 0) {
+                    clearInterval(timer);
+                    document.getElementById('countdown').textContent = "Час вийшов";
+                    alert("габела");
+                    window.close();
+                }
+            }, 1000);
+        }
+      
+        startTimer();
+    </script>
+
+</body>
+</html>
