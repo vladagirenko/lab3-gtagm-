@@ -1,1 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Завдання 2-4</title>
+</head>
+<body>
 
+    <p><a href="index.html">← Назад</a></p>
+    <h1>Завдання 2-4</h1>
+    <hr>
+
+    <div id="infoBlock" style="border: 1px solid #000; padding: 20px; width: 300px; font-family: monospace; font-size: 18px; margin-top: 20px;">
+        <p>Координати X: <span id="posX">0</span></p>
+        <p>Координати Y: <span id="posY">0</span></p>
+        <p>Код клавіші: <span id="keyCode">-</span></p>
+    </div>
+
+    <script>
+        window.onmousemove = function(e) {
+            document.getElementById('posX').textContent = e.clientX;
+            document.getElementById('posY').textContent = e.clientY;
+        };
+
+        window.onkeydown = function(e) {
+            document.getElementById('keyCode').textContent = e.code;
+        };
+    </script>
+
+</body>
+</html>
