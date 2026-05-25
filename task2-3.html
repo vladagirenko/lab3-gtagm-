@@ -1,1 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Завдання 2-3</title>
+</head>
+<body>
 
+    <select id="colorSelect" onchange="changeColor()" style="position: absolute; left: 10px; top: 10px; font-size: 16px;">
+        <option value="black">Чорний</option>
+        <option value="red">Червоний</option>
+        <option value="green">Зелений</option>
+        <option value="blue">Синій</option>
+        <option value="orange">Помаранчевий</option>
+    </select>
+
+    <div id="square" style="position: absolute; right: 10px; top: 10px; width: 100px; height: 100px; background-color: black;"></div>
+
+    <div style="text-align: center; margin-top: 150px;">
+        <h1>Завдання 2-3</h1>
+        <p><a href="index.html">← Назад до головного меню</a></p>
+    </div>
+
+    <script>
+        function changeColor() {
+            var select = document.getElementById('colorSelect');
+            var square = document.getElementById('square');
+            
+            square.style.backgroundColor = select.value;
+        }
+    </script>
+
+</body>
+</html>
