@@ -1,1 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Завдання 3-4</title>
+</head>
+<body>
 
+    <p><a href="index.html">← Назад</a></p>
+    <h1>Завдання 3-4</h1>
+    <hr>
+
+    <h3>Вихідний текст:</h3>
+    <p id="sourceText">Іван вчора втратив свою кредитку, її номер 1178-9087-2384-8787. Тому він пішов в банк і описав ситуацію. Там пішли йому назустріч і видали нову кредитку під номером: 1103-8899-0811-1722</p>
+
+    <h3>Знайдені номери карток (вміст змінної result):</h3>
+    <div id="output" style="font-size: 18px; font-weight: bold; color: blue;"></div>
+
+    <script>
+        var text = document.getElementById('sourceText').textContent;
+
+        var regex = /\d{4}-\d{4}-\d{4}-\d{4}/g;
+
+        var result = text.match(regex);
+
+        if (result) {
+            document.getElementById('output').textContent = result.join(', ');
+        } else {
+            document.getElementById('output').textContent = "Картки не знайдено";
+        }
+    </script>
+
+</body>
+</html>
