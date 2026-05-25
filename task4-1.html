@@ -1,1 +1,34 @@
-<h1>Завдання 4-1</h1>
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Завдання 4-1</title>
+</head>
+<body>
+
+    <p><a href="index.html">← Назад</a></p>
+    <h1>Завдання 4-1: Текстовий годинник</h1>
+    <hr>
+
+    <h2 id="clock" style="font-size: 48px; font-family: monospace; color: #333;">00:00:00</h2>
+
+    <script>
+        function updateClock() {
+            var time = new Date();
+            var hours = time.getHours();
+            var minutes = time.getMinutes();
+            var seconds = time.getSeconds();
+
+            if (hours < 10) hours = "0" + hours;
+            if (minutes < 10) minutes = "0" + minutes;
+            if (seconds < 10) seconds = "0" + seconds;
+
+            document.getElementById('clock').textContent = hours + ":" + minutes + ":" + seconds;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+</body>
+</html>
