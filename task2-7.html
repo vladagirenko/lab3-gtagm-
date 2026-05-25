@@ -1,1 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Завдання 2-7</title>
+</head>
+<body>
 
+    <p><a href="index.html">← Назад</a></p>
+    <h1>Завдання 2-7</h1>
+    <hr>
+
+    <div style="font-size: 20px; margin-top: 20px;">
+        <p><b>Початкові дані:</b></p>
+        <ul>
+            <li>Сума кредиту (S): 1 000 000 грн</li>
+            <li>Процентна ставка (p): 10%</li>
+            <li>Кількість років (years): 5</li>
+        </ul>
+        <p><b>Результат розрахунку:</b></p>
+        <p>Переплата по кредиту становить: <b id="result" style="color: green;">0</b> грн.</p>
+    </div>
+
+    <script>
+        var S = 1000000;
+        var p = 10;
+        var years = 5;
+
+        var perepl = S * (p / 100) * years;
+      
+        document.getElementById('result').textContent = perepl.toLocaleString();
+    </script>
+
+</body>
+</html>
