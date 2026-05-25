@@ -17,11 +17,11 @@
 
         function moveImage() {
             var maxX = window.innerWidth - 100;
-            var maxY = window.innerHeight - 1000;
+            var maxY = window.innerHeight - 100;
 
             var randomX = Math.floor(Math.random() * maxX);
-            var randomY = Math.floor(Math.random() * maxY);
-
+            var randomY = Math.floor(Math.random() * (maxY - 200)) + 300;
+            
             img.style.left = randomX + 'px';
             img.style.top = randomY + 'px';
         }
