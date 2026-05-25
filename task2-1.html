@@ -1,1 +1,33 @@
-<h1>Завдання 2-1</h1>
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Завдання 2-1</title>
+</head>
+<body>
+
+    <p><a href="index.html">← Назад</a></p>
+    <h1>Завдання 2-1</h1>
+    <hr>
+
+    <img id="crazyImg" src="https://picsum.photos/200" style="position: absolute; width: 100px; height: 100px; transition: 0.2s;">
+
+    <script>
+        var img = document.getElementById('crazyImg');
+
+        function moveImage() {
+            var maxX = window.innerWidth - 100;
+            var maxY = window.innerHeight - 100;
+
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+
+            img.style.left = randomX + 'px';
+            img.style.top = randomY + 'px';
+        }
+
+        setInterval(moveImage, 1000);
+    </script>
+
+</body>
+</html>
