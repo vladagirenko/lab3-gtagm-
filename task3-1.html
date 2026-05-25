@@ -1,1 +1,30 @@
-<h1>Завдання 3-1</h1>
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Завдання 3-1</title>
+</head>
+<body>
+
+    <p><a href="index.html">← Назад</a></p>
+    <h1>Завдання 3-1</h1>
+    <hr>
+
+    <button onclick="changeParagraphs()">Змінити розмір абзаців</button>
+
+    <p>Перший тестовий абзац (поки що звичайний розмір).</p>
+    <p>Другий тестовий абзац для перевірки роботи скрипта.</p>
+    <p>Третій абзац. Після натискання кнопки всі вони стануть 15px.</p>
+
+    <script>
+        function changeParagraphs() {
+            var paragraphs = document.getElementsByTagName('p');
+            
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].setAttribute('style', 'font-size: 15px;');
+            }
+        }
+    </script>
+
+</body>
+</html>
