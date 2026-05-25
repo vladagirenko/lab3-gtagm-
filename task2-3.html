@@ -6,26 +6,27 @@
 </head>
 <body>
 
-    <select id="colorSelect" onchange="changeColor()" style="position: absolute; left: 10px; top: 10px; font-size: 16px;">
-        <option value="black">Чорний</option>
-        <option value="red">Червоний</option>
-        <option value="green">Зелений</option>
-        <option value="blue">Синій</option>
-        <option value="orange">Помаранчевий</option>
-    </select>
+    <p><a href="index.html">← Назад</a></p>
+    <h1>Завдання 2-3</h1>
+    <hr>
 
-    <div id="square" style="position: absolute; right: 10px; top: 10px; width: 100px; height: 100px; background-color: black;"></div>
-
-    <div style="text-align: center; margin-top: 150px;">
-        <h1>Завдання 2-3</h1>
-        <p><a href="index.html">← Назад до головного меню</a></p>
+    <div style="margin-top: 20px;">
+        <label for="colorSelect">Оберіть колір: </label>
+        <select id="colorSelect" onchange="changeColor()">
+            <option value="black">Чорний</option>
+            <option value="red">Червоний</option>
+            <option value="green">Зелений</option>
+            <option value="blue">Синій</option>
+            <option value="orange">Помаранчевий</option>
+        </select>
     </div>
+
+    <div id="square" style="width: 100px; height: 100px; background-color: black; margin-top: 20px;"></div>
 
     <script>
         function changeColor() {
             var select = document.getElementById('colorSelect');
             var square = document.getElementById('square');
-            
             square.style.backgroundColor = select.value;
         }
     </script>
