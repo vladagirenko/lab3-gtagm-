@@ -1,1 +1,37 @@
-<h1>Завдання 1-1</h1>
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Завдання 1-1</title>
+</head>
+<body>
+
+    <p><a href="index.html">← Назад</a></p>
+    <h1>Завдання 1-1</h1>
+    <hr>
+
+    <input type="text" id="textInput" value="Тестовий текст">
+    <input type="number" id="sizeInput" value="20">
+    <button onclick="run()">Вивести</button>
+
+    <div id="output"></div>
+
+    <script>
+        function printTextWithSize(text, fontSize) {
+            var container = document.getElementById('output');
+            container.innerHTML = '';
+            var p = document.createElement('p');
+            p.textContent = text;
+            p.style.fontSize = fontSize + 'px';
+            container.appendChild(p);
+        }
+
+        function run() {
+            var t = document.getElementById('textInput').value;
+            var s = document.getElementById('sizeInput').value;
+            printTextWithSize(t, s);
+        }
+    </script>
+
+</body>
+</html>
